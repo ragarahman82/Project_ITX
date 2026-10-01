@@ -21,47 +21,91 @@
         <a href="tentang.html">Tentang</a>
     </nav>
 
-    <main>
+    
+<main class="dashboard">
 
-        <h2>Daftar Laporan</h2>
+    <section class="welcome">
+        <div>
+            <span class="welcome-label">DATA FASILITAS</span>
+            <h2>Daftar Laporan</h2>
+            <p>Pantau perkembangan laporan kerusakan fasilitas kampus.</p>
+        </div>
+        <div class="welcome-illustration">📋</div>
+    </section>
 
-        <table border="1">
+    <section class="recent-reports">
+        <div class="section-heading">
+            <h2>Semua Laporan</h2>
+            <a href="laporan.html">+ Buat Laporan</a>
+        </div>
 
-            <tr>
-                <th>No</th>
-                <th>Fasilitas</th>
-                <th>Lokasi</th>
-                <th>Kerusakan</th>
-                <th>Status</th>
-            </tr>
+        <div class="report-filters">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Cari fasilitas atau lokasi..."
+            >
 
-            <tr>
-                <td>1</td>
-                <td>AC</td>
-                <td>Gedung Sirah - Ruang 204</td>
-                <td>AC tidak dingin</td>
-                <td>Diproses</td>
-            </tr>
+            <select id="statusFilter">
+                <option value="semua">Semua Status</option>
+                <option value="menunggu">Menunggu</option>
+                <option value="diproses">Diproses</option>
+                <option value="selesai">Selesai</option>
+            </select>
+        </div>
 
-            <tr>
-                <td>2</td>
-                <td>Lampu</td>
-                <td>Gedung A - Ruang 101</td>
-                <td>Lampu mati</td>
-                <td>Menunggu</td>
-            </tr>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Fasilitas</th>
+                        <th>Lokasi</th>
+                        <th>Kerusakan</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
 
-            <tr>
-                <td>3</td>
-                <td>Kursi</td>
-                <td>Gedung B - Ruang 203</td>
-                <td>Kaki kursi patah</td>
-                <td>Selesai</td>
-            </tr>
+                <tbody id="reportTable">
+                    <tr>
+                        <td>1</td>
+                        <td>AC</td>
+                        <td>Gedung Sirah - Ruang 204</td>
+                        <td>AC tidak dingin</td>
+                        <td>
+                            <span class="status processing">Diproses</span>
+                        </td>
+                    </tr>
 
-        </table>
+                    <tr>
+                        <td>2</td>
+                        <td>Lampu</td>
+                        <td>Gedung A - Ruang 101</td>
+                        <td>Lampu mati</td>
+                        <td>
+                            <span class="status waiting">Menunggu</span>
+                        </td>
+                    </tr>
 
-    </main>
+                    <tr>
+                        <td>3</td>
+                        <td>Kursi</td>
+                        <td>Gedung B - Ruang 203</td>
+                        <td>Kaki kursi patah</td>
+                        <td>
+                            <span class="status completed">Selesai</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="emptyMessage" hidden>
+            Tidak ada laporan yang sesuai.
+        </p>
+    </section>
+
+</main>
 
     <footer>
         <p>&copy; 2026 Lapor Fasilitas Kampus</p>

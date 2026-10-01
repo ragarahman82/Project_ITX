@@ -9,9 +9,17 @@
 
 <body>
 
-    <header>
-        <h1>Lapor Fasilitas Kampus</h1>
-        <p>Laporkan kerusakan fasilitas kampus dengan mudah.</p>
+    
+<body>
+
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div>
+                <h1>Lapor Fasilitas Kampus</h1>
+                <p>Sistem Informasi Pelaporan Fasilitas Kampus</p>
+            </div>
+            <div class="header-icon">🏫</div>
+        </div>
     </header>
 
     <nav>
@@ -21,24 +29,94 @@
         <a href="tentang.html">Tentang</a>
     </nav>
 
-    <main>
+    <main class="dashboard">
 
-        <h2>Selamat Datang 👋</h2>
+        <section class="welcome">
+            <div>
+                <span class="welcome-label">DASHBOARD</span>
+                <h2>Selamat Datang!</h2>
+                <p>
+                    Laporkan kerusakan fasilitas kampus
+                    agar segera mendapatkan penanganan.
+                </p>
 
-        <p>
-            Website ini digunakan untuk melaporkan fasilitas kampus
-            yang mengalami kerusakan atau membutuhkan perbaikan.
-        </p>
+                <a href="laporan.html" class="primary-button">
+                    + Buat Laporan
+                </a>
+            </div>
 
-        <a href="laporan.html">
-            Buat Laporan Sekarang
-        </a>
+            <div class="welcome-illustration">
+                🏢
+            </div>
+        </section>
+
+        <section class="statistics">
+            <div class="stat-card blue">
+                <div class="stat-icon">📋</div>
+                <p>Total Laporan</p>
+                <h3>25</h3>
+            </div>
+
+            <div class="stat-card orange">
+                <div class="stat-icon">⏳</div>
+                <p>Menunggu</p>
+                <h3>8</h3>
+            </div>
+
+            <div class="stat-card purple">
+                <div class="stat-icon">🔧</div>
+                <p>Diproses</p>
+                <h3>10</h3>
+            </div>
+
+            <div class="stat-card green">
+                <div class="stat-icon">✅</div>
+                <p>Selesai</p>
+                <h3>7</h3>
+            </div>
+        </section>
+
+        <section class="recent-reports">
+            <div class="section-heading">
+                <h2>Laporan Terbaru</h2>
+                <a href="daftar.html">Lihat Semua →</a>
+            </div>
+
+            <div class="report-item">
+                <div class="report-icon">❄️</div>
+                <div class="report-info">
+                    <h3>AC Tidak Dingin</h3>
+                    <p>Gedung Sirah - Ruang 204</p>
+                </div>
+                <span class="status processing">Diproses</span>
+            </div>
+
+            <div class="report-item">
+                <div class="report-icon">💡</div>
+                <div class="report-info">
+                    <h3>Lampu Ruangan Mati</h3>
+                    <p>Gedung A - Ruang 101</p>
+                </div>
+                <span class="status waiting">Menunggu</span>
+            </div>
+
+            <div class="report-item">
+                <div class="report-icon">🪑</div>
+                <div class="report-info">
+                    <h3>Kursi Rusak</h3>
+                    <p>Gedung B - Ruang 203</p>
+                </div>
+                <span class="status completed">Selesai</span>
+            </div>
+        </section>
 
     </main>
 
     <footer>
         <p>&copy; 2026 Lapor Fasilitas Kampus</p>
     </footer>
+
+    <script src="js/daftar.js"></script>
 
 </body>
 </html>
