@@ -632,3 +632,399 @@ main {
         width: 100%;
     }
 }
+
+/* =========================
+   LOGIN PAGE MODERN
+========================= */
+
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* BAGIAN KIRI */
+
+.login-visual {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #0f172a, #1e3a8a, #2563eb);
+    color: white;
+    padding: 45px 55px;
+}
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 90px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+}
+
+.visual-text {
+    margin-top: auto;
+    margin-bottom: 35px;
+    max-width: 480px;
+}
+
+.visual-label,
+.welcome-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.visual-label {
+    color: #bfdbfe;
+}
+
+.visual-text h1 {
+    margin: 18px 0;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+}
+
+.visual-text h1 span {
+    color: #93c5fd;
+}
+
+.visual-text p {
+    color: #dbeafe;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 420px;
+}
+
+.visual-decoration {
+    position: relative;
+    height: 180px;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.circle-one {
+    width: 230px;
+    height: 230px;
+    bottom: -120px;
+    right: 30px;
+}
+
+.circle-two {
+    width: 160px;
+    height: 160px;
+    bottom: -85px;
+    right: 65px;
+}
+
+.decoration-card {
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    animation: floating 4s ease-in-out infinite;
+}
+
+.decoration-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: #bfdbfe;
+    color: #1e40af;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.decoration-card strong,
+.decoration-card small {
+    display: block;
+}
+
+.decoration-card small {
+    margin-top: 5px;
+    color: #dbeafe;
+}
+
+.visual-footer {
+    margin-top: auto;
+    color: #bfdbfe;
+    font-size: 12px;
+}
+
+/* BAGIAN KANAN */
+
+.login-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #f8fafc;
+}
+
+.login-form-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 0;
+}
+
+.mobile-brand {
+    display: none;
+}
+
+.form-heading {
+    margin-bottom: 35px;
+}
+
+.welcome-label {
+    color: #2563eb;
+}
+
+.form-heading h2 {
+    margin: 12px 0 8px;
+    color: #0f172a;
+    font-size: 32px;
+}
+
+.form-heading p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* INPUT */
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+    background: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* OPSI FORM */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 25px;
+    font-size: 13px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+}
+
+.remember-option input {
+    accent-color: #2563eb;
+}
+
+.forgot-link,
+.account-info a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* TOMBOL LOGIN */
+
+.modern-login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+    transition: 0.3s;
+}
+
+.modern-login-button span {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.modern-login-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.32);
+}
+
+.modern-login-button:hover span {
+    transform: translateX(5px);
+}
+
+/* BAGIAN BAWAH */
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 35px 0 25px;
+    color: #94a3b8;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.account-info {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.security-note {
+    margin-top: 55px;
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* ANIMASI */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .login-visual {
+        padding: 35px;
+    }
+
+    .login-form-section {
+        padding: 30px;
+    }
+
+    .visual-text h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 700px) {
+    .login-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .login-visual {
+        display: none;
+    }
+
+    .login-form-section {
+        min-height: 100vh;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .login-form-card {
+        max-width: 430px;
+    }
+
+    .mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 55px;
+        color: #0f172a;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .mobile-brand .brand-icon {
+        color: white;
+        background: #2563eb;
+    }
+
+    .form-heading h2 {
+        font-size: 28px;
+    }
+
+    .security-note {
+        margin-top: 40px;
+    }
+}
