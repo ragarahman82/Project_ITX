@@ -1,10 +1,12 @@
-from flask import Flask
+
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Website Lapor Fasilitas Kampus Berhasil Berjalan!"
+    return render_template("Login.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
+
